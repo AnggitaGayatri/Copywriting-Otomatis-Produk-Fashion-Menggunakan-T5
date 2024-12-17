@@ -24,7 +24,7 @@ Proyek ini membandingkan **tiga model** dalam menghasilkan deskripsi copywriting
 
 | Model                     | ROUGE 1 | ROUGE 2 | ROUGE L | BLEU  |
 |---------------------------|---------|---------|---------|-------|
-| **T5 Menggunakan Indonesia Dataset**  | 0.70    | 0.83    | 0.75    | 0.81  |
+| **T5 Menggunakan Indonesia Dataset**  | 0.83    | 0.76    | 0.81    | 0.70  |
 | **T5 Menggunakan English Dataset**    | 0.88    | 0.82    | 0.86    | 0.78  |
 | **mT5 Menggunakan Indonesia Dataset** | 0.62    | 0.47    | 0.57    | 0.41  |
 
@@ -50,3 +50,18 @@ Model **T5 Using English Dataset** mendapatkan hasil evaluasi terbaik dan dipili
 
 ---
 
+## **Proses Instalasi API**
+
+Ikuti langkah-langkah berikut untuk menginstal dan menjalankan API:
+
+### **1. Unduh Model T5 dan File API**
+- Pastikan Anda memiliki model **T5** yang disimpan dalam direktori yang sama dengan file **`copywriting.py`**.
+- Contoh struktur folder:
+    ```
+    project/
+    ├── t5_english/          # Direktori model T5
+    ├── copywriting.py       # File API
+    └── requirements.txt     # File dependencies
+    ```
+
+---
