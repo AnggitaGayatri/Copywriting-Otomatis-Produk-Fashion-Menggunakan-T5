@@ -54,7 +54,7 @@ Model **T5 Using English Dataset** mendapatkan hasil evaluasi terbaik dan dipili
 
 Ikuti langkah-langkah berikut untuk menginstal dan menjalankan API:
 
-### **1. Unduh Model T5 dan File API**
+### **1. Unduh Model T5 Bahasa Inggris dan File API**
 - Pastikan Anda memiliki model **T5** yang disimpan dalam direktori yang sama dengan file **`copywriting.py`**.
 - Contoh struktur folder:
     ```
@@ -63,5 +63,98 @@ Ikuti langkah-langkah berikut untuk menginstal dan menjalankan API:
     ├── copywriting.py       # File API
     └── requirements.txt     # File dependencies
     ```
+### **2. Buat Virtual Environment**
+Buka terminal atau CMD, lalu arahkan direktori ke folder proyek:
+```
+cd path/to/project
+```
+Buat virtual environment dengan perintah berikut:
+```
+python -m venv venv
+```
+### **3. Aktifkan Virtual Environment**
+- Untuk Windows:
+```
+venv\Scripts\activate
+```
+- Untuk Linux/Mac:
+```
+source venv/bin/activate
+```
+### **4. Install Dependencies**
+Pastikan file requirements.txt berisi semua library yang dibutuhkan. Install library dengan perintah:
+```
+pip install -r requirements.txt
+```
+Jika muncul error terkait Rust atau Cargo, install Rust terlebih dahulu melalui https://rustup.rs/
+### **5. Jalankan API**
+Setelah instalasi selesai, jalankan API dengan perintah berikut:
+```
+python copywriting.py
+```
+Jika berhasil, server akan berjalan di:
+```
+http://127.0.0.1:8000
+```
+### **6. Akses Dokumentasi API**
+Anda dapat mengakses dokumentasi API melalui endpoint /docs dengan mengunjungi:
+```
+http://127.0.0.1:8000/docs
+```
+
+---
+
+## **Cara Menggunakan API**
+### **Endpoint Utama**
+| Method                     | Endpoint | Deskripsi |
+|----------------------------|----------|-----------|
+| GET  | /                     | Endpoint utama (welcome message) |
+| POST | /generate_copywriting | Menghasilkan teks copywriting    |
+
+---
+
+### **Contoh Input dan Output**
+Request:
+```
+POST /generate_copywriting
+Content-Type: application/json
+
+{
+  "product_description": "baju koko pria"
+}
+```
+Response:
+```
+{
+  "input_language": "id",
+  "translated_input": "Men's koko shirt",
+  "generated_copywriting": "Men's koko shirt with a simple and casual design suitable as an everyday outfit for activities soft and quality material will be comfortable when used all day long"
+}
+```
+
+---
+
+### **Fitur Utama API**
+1. Deteksi Bahasa Otomatis: API mendeteksi bahasa input dan menerjemahkannya ke dalam bahasa Inggris (jika bukan bahasa Inggris).
+2. Pemrosesan Model T5: Menggunakan Hugging Face Transformers untuk menghasilkan teks copywriting.
+3. Optimasi Output: Parameter seperti num_beams, temperature, dan length_penalty dikustomisasi untuk menghasilkan teks berkualitas tinggi.
+4. Dokumentasi Interaktif: Endpoint tersedia dalam format Swagger UI di /docs.
+
+---
+
+### **Dependencies**
+API ini menggunakan library berikut:
+```
+fastapi
+uvicorn
+transformers
+torch
+googletrans==4.0.0-rc1
+```
+
+---
+
+## **Penutup**
+Dengan mengikuti langkah-langkah di atas, Anda dapat menjalankan API copywriting berbasis model T5 dengan mudah. Jika ada kendala, silakan hubungi salah satu kontributor proyek.
 
 ---
