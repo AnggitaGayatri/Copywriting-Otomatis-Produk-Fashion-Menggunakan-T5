@@ -1,0 +1,20 @@
+Kumpulan Model T5 dan MT5
+
+Repositori ini menyediakan tiga model bahasa, yaitu:
+- T5 Bahasa Indonesia
+- T5 Bahasa Inggris
+- MT5 Bahasa Indonesia
+
+Setiap model terdiri dari tujuh file, sebagai berikut:
+- model.safetensors
+- tokenizer.json
+- spiece.model
+- tokenizer_config.json
+- special_tokens_map.json
+- config.json
+- generation_config.json
+
+Namun, untuk alasan ukuran file, file model.safetensors tidak disertakan di dalam repositori ini. Anda dapat mengunduh file tersebut melalui tautan Google Drive berikut:
+https://drive.google.com/drive/folders/1ViItkAAoaZsObCg2pBXYdEQvmql0wguu
+
+Harap pastikan Anda mengunduh file model.safetensors yang sesuai dengan model yang ingin digunakan, kemudian letakkan file tersebut di direktori yang sama dengan file lainnya agar model dapat berjalan dengan baik.
