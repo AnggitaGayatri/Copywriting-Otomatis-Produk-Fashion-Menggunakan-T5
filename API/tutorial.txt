@@ -1,0 +1,10 @@
+1. Unduh model T5 dan API (letakkan dalam folder yang sama)
+2. Buka CMD dan arahkan pada direktori folder
+3. Buat virtual environment dengan perintah python -m venv venv
+4. Aktifkan venv:
+- source venv/bin/activate  # Untuk Linux/Mac
+- venv\Scripts\activate     # Untuk Windows
+4. Install semua library dengan perintah pip install -r requirements.txt
+(jika diperlukan install Rust dan Cargo di https://rustup.rs/)
+5. Jalankan program dengan python copywriting.py
+6. Kalau sudah berhasil, akses lewat http://127.0.0.1:8000/docs
