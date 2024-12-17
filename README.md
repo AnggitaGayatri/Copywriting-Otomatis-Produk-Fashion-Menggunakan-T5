@@ -24,4 +24,4 @@ Berikut adalah daftar mahasiswa yang berkontribusi dalam proyek ini:
 | Ni Luh Anggita Gayatri | 2105551077 |
 | Kristina               | 2105551088 |
 | Dyah Putri Maheswari   | 2105551102 |
-| Ni Made Naila Nalista  | 2105551088 |
+| Ni Made Naila Nalista  | 2105551115 |
